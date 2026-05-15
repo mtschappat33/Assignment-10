@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fjalla+One&display=swap");
+
+:root {
+  --text-color: white;
+  --primary-color: darkblue;
+  --secondary-color: rgb(39, 172, 165);
+  --hover-color: rgba(19, 172, 165, 0.8);
+  --break-color: grey;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid orange;*/
+}
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.title h1 {
+  font-family: "Fjalla One", sans-serif;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 50px;
+  margin: 0;
+  padding: 10px 0;
+  background-color: var(--primary-color);
+}
+
+header nav {
+  margin: 0px auto;
+}
+
+header nav ul li a,
+header a button {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 24px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 20px;
+  border-right: var(--break-color) 1px solid;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+header a button {
+  border: none;
+  border-radius: 50px;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  padding: 10px 22px;
+}
+
+header a button:hover {
+  background-color: var(--hover-color);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main {
+  padding-top: 10px;
+  justify-content: center;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card {
+  border: 1px solid black;
+  width: 24%;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 4px 4px 6px 0px rgba(0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card p {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  font-size: 15px;
+}
+
+.card button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  align-self: center;
+  width: auto;
+}
+
+aside {
+  align-items: center;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside img {
+  height: auto;
+  margin: 20px 0;
+  width: 80%;
+  max-width: 300px;
+}
+
+aside p {
+  text-align: center;
+  max-width: 300px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+@media screen and (max-width: 856px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  aside {
+    width: 90%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    display: block;
+    padding: 10px 0;
+    border-right: none;
+    text-align: center;
+    border: none;
+  }
+
+  nav ul li a {
+    display: block;
+    text-align: center;
+  }
+}
